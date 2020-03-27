@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Campus la 35</title>
+	<meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=3.0, minimum-scale=1.0">
+	<link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+	<form action="../PHPCampus/checkLogin.php" class="formulario" method="POST">
+		<div class="titulo">
+			<img class="logo" src="imagenes/logo.png">
+			<h1>Ingrese su usuario y contraseña</h1>
+		</div>
+		<div class="contenedor">    
+        	<div class="input-contenedor">
+        		<input required type="text" name="user" placeholder="Ingrese usuario">
+            </div>
+            <div class="input-contenedor">
+             	<input required type="password" name="pass" placeholder="Contraseña">
+            </div>
+            <input type="submit" value="Ingresar" class="button">
+		</div>
+		<div class="recupContraseña">
+			<a class="direccion" href="subpaginas/paginaRecuperacion/pagina1DeRecuperacion.html">Olvide mi contraseña.</a>
+		</div>
+	</form>
+</body>
+</html>
+

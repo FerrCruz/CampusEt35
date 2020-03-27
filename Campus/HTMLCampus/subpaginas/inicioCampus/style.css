@@ -1,0 +1,159 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+a:any-link {
+    color: white;
+    text-decoration: none;
+}
+
+@keyframes fadeIn {
+    from {
+        background-color: #000;
+    }
+
+    to {
+        background-color: rgba(187, 187, 187, 0.5);
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        background-color: rgba(187, 187, 187, 0.5);
+    }
+
+    to {
+        background-color: #000;
+    }
+}
+
+header {
+    height: 56px;
+    width: 100%;
+    background-color: #000;
+    color: white;
+    position: fixed;
+}
+
+#header {
+    padding: 0 16px;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .circle {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    animation-duration: 0.5s;
+}
+
+header .circle:hover {  
+    animation-name: fadeIn;
+    background-color: rgba(187, 187, 187, 0.5);
+}
+
+header .circle:not(hover) {
+    animation-name: fadeOut;
+}
+
+#navleft {
+    display: flex;
+    align-items: center;
+}
+
+#navleft a {  
+    height: 100%;
+    font-size: 24px;
+    padding: 8px;
+}
+
+#navright {
+    display: flex;
+    align-items: center;
+}
+
+#navright a {
+    font-size: 16px;
+    margin: 0 4px;
+    text-align: center;
+    padding: 12px 0;
+}
+
+#navright a:last-child {
+    margin-left: 16px;
+}
+
+#perfil {
+    height: 32px;
+    width: 32px;
+    background-color: #bbb;
+    border-radius: 50%;
+}
+
+nav {
+    width: 240px;
+    height: 100%;
+    overflow-y: scroll;
+    background-color: #000;
+    color: white;
+    position: fixed;
+    left: -242px;
+    top: 56px;
+}
+
+nav div {
+    padding: 10px 0;
+}
+
+nav div a {
+    display: block;
+    width: 100%;
+    height: 40px;
+    padding: 4px 24px;
+    font-size: 20px;
+    animation-duration: 0.5s;
+}
+
+nav div a:hover {  
+    animation-name: fadeIn;
+    background-color: rgba(187, 187, 187, 0.5);
+}
+
+nav div a:not(hover) {
+    animation-name: fadeOut;
+}
+
+body {
+    background: url("imagenes/fondo.jpg") no-repeat center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+}
+
+@media screen and (max-width: 500px) {
+
+    #navleft a:last-child {
+        display: none;
+    }
+
+}
+
+/* width */
+nav::-webkit-scrollbar {
+    width: 7.5px;
+}
+
+/* Track */
+nav::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 2.5px #202020;
+}
+
+/* Handle */
+nav::-webkit-scrollbar-thumb {
+    background: gray;
+}
